@@ -1,0 +1,28 @@
+<template>
+    <h1>Hello ${state.name}!</h1>
+    <p>see <a href="https://lego.js.org/v2/" target="_blank" rel="noreferrer noopener">🚀 lego.js</a> for details!</p>
+</template>
+
+<style>
+    h1, p {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 9vh;
+        margin-top: 5vh;
+        background: linear-gradient(to right, white, #969FFE, #372DB1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+
+<script>
+export default class extends Lego {
+    init() {
+        this.state = {
+            name: "World"
+        };
+    }
+}
+</script>

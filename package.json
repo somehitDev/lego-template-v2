@@ -1,0 +1,33 @@
+{
+    "name": "lego-template",
+    "version": "1.0.0",
+    "description": "template for @polight/lego@2.x",
+    "scripts": {
+        "build": "npx lego && node copy.files.js build",
+        "serve": "npm run build && cd build && npx sirv-cli",
+        "serve:nobuild": "cd build && npx sirv-cli",
+        "rollup": "npm run build && rollup -c && node copy.files.js rollup",
+        "rollup:nobuild": "rollup -c && node copy.files.js rollup"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oyajiDev/lego-template-v2.git"
+    },
+    "keywords": [
+        "lego.js"
+    ],
+    "author": "oyajiDev",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/oyajiDev/lego-template-v2/issues"
+    },
+    "homepage": "https://github.com/oyajiDev/lego-template-v2#readme",
+    "type": "module",
+    "devDependencies": {
+        "@polight/lego": "^2.0.0-beta.8",
+        "argparse": "^2.0.1",
+        "glob": "^10.3.10",
+        "rollup": "^4.0.2",
+        "sirv-cli": "^2.0.2"
+    }
+}

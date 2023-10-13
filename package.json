@@ -3,11 +3,11 @@
     "version": "1.0.0",
     "description": "template for @polight/lego@2.x",
     "scripts": {
-        "build": "npx lego && node copy.files.js build",
-        "serve": "npm run build && cd build && npx sirv-cli",
+        "build": "node copy.files.js build && npx lego",
+        "serve": "npm run build && npm run serve:nobuild",
         "serve:nobuild": "cd build && npx sirv-cli",
-        "rollup": "npm run build && rollup -c && node copy.files.js rollup",
-        "rollup:nobuild": "rollup -c && node copy.files.js rollup"
+        "rollup": "npm run build && npm run rollup:nobuild",
+        "rollup:nobuild": "node copy.files.js rollup && rollup -c"
     },
     "keywords": [
         "lego.js"

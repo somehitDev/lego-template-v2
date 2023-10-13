@@ -25,6 +25,9 @@ if (process.platform == "darwin") {
 
 if (args.copyType == "build") {
     const destDir = path.join(__dirname, path.dirname(legoConfig.targetDir));
+    if (!fs.existsSync(destDir)) {
+        fs.mkdirSync(destDir, { recursive: true });
+    }
 
     for (var srcFile of globSync(path.join(sourceDir, "*.*"), { ignore: "**/index.rollup.html" })) {
         const srcFileName = path.basename(srcFile);
@@ -33,6 +36,9 @@ if (args.copyType == "build") {
 }
 else if (args.copyType == "rollup") {
     const rollupDir = path.join(__dirname, rollupConfig.output.file.split("/")[0]);
+    if (!fs.existsSync(rollupDir)) {
+        fs.mkdirSync(rollupDir, { recursive: true });
+    }
 
     for (var srcFile of globSync(path.join(sourceDir, "*.*"), { ignore: "**/index.html" })) {
         const srcFileName = path.basename(srcFile);

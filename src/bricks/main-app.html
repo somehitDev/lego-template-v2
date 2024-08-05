@@ -18,11 +18,11 @@
 </style>
 
 <script>
+import store from "../store.js";
+
 export default class extends Lego {
     init() {
-        this.state = {
-            name: "World"
-        };
+        store.subscribe(this, [ "name" ]);
     }
 }
 </script>

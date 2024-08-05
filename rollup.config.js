@@ -1,5 +1,6 @@
 import commonjs from "@rollup/plugin-commonjs";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import terser from "@rollup/plugin-terser";
 
 export default {
     input: "build/bricks/index.js",
@@ -18,6 +19,7 @@ export default {
         nodeResolve({
             jsnext: true,
             main: false
-        })
+        }),
+        terser()
     ]
 };

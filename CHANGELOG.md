@@ -6,3 +6,5 @@
 - update dependencies.
 - add `@polight/store`.
 - fix `rollup.config.js` file(for lego-store).
+  - add `commonjs`, `nodeResolve`.
+  - add `terser`(minify).

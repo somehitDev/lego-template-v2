@@ -20,6 +20,7 @@
         "@polight/store": "^0.0.1",
         "@rollup/plugin-commonjs": "^26.0.1",
         "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-terser": "^0.4.4",
         "argparse": "^2.0.1",
         "glob": "^11.0.0",
         "rollup": "^4.20.0",

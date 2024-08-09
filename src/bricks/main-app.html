@@ -20,9 +20,7 @@
 <script>
 import store from "../store.js";
 
-export default class extends Lego {
-    init() {
-        store.subscribe(this, [ "name" ]);
-    }
+function setup() {
+    store.subscribe(this, [ "name" ]);
 }
 </script>

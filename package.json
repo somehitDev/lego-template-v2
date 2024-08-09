@@ -3,16 +3,16 @@
     "version": "1.0.0",
     "description": "template for @polight/lego@2.x",
     "scripts": {
-        "build": "node copy.files.js build && npx lego",
-        "serve": "npm run build && npm run serve:nobuild",
-        "serve:nobuild": "cd build && npx sirv-cli",
-        "rollup": "npm run build && npm run rollup:nobuild",
-        "rollup:nobuild": "node copy.files.js rollup && rollup -c"
+        "build": "node scripts/runner.js build",
+        "serve": "node scripts/runner.js serve",
+        "serve:nobuild": "node scripts/runner.js serve:nobuild",
+        "rollup": "node scripts/runner.js rollup",
+        "rollup:nobuild": "node scripts/runner.js rollup:nobuild"
     },
     "keywords": [
         "lego.js"
     ],
-    "author": "oyajiDev",
+    "author": "somehitDev",
     "license": "MIT",
     "type": "module",
     "devDependencies": {
